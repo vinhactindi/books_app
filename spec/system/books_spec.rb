@@ -8,6 +8,7 @@ RSpec.describe 'Books', js: true, type: :system do
   it 'enable me to visit index page' do
     visit books_url
     expect(page).to have_selector('h1', text: 'Books')
+    expect(page).to have_text(rails_book.title)
   end
 
   it 'enable me to create a Book' do
