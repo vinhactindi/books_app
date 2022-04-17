@@ -5,12 +5,12 @@ RSpec.describe 'Books', js: true, type: :system do
 
   let(:rails_book) { books(:rails) }
 
-  it 'visiting the index' do
+  it 'enable me to visit index page' do
     visit books_url
     expect(page).to have_selector('h1', text: 'Books')
   end
 
-  it 'creating a Book' do
+  it 'enable me to create a Book' do
     visit books_url
     click_on 'New Book'
 
@@ -22,7 +22,7 @@ RSpec.describe 'Books', js: true, type: :system do
     click_on 'Back'
   end
 
-  it 'updating a Book' do
+  it 'enable me to update a Book' do
     visit books_url
     click_on 'Edit', match: :first
 
@@ -34,7 +34,7 @@ RSpec.describe 'Books', js: true, type: :system do
     click_on 'Back'
   end
 
-  it 'destroying a Book' do
+  it 'enable me to destroy a Book' do
     visit books_url
     page.accept_confirm do
       click_on 'Destroy', match: :first
